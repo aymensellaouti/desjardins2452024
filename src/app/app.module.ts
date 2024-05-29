@@ -14,6 +14,10 @@ import { PereComponent } from './components/pere/pere.component';
 import { FilsComponent } from './components/fils/fils.component';
 import { SommeComponent } from './components/somme/somme.component';
 import { NoorCustomButtonComponent } from './components/noor-custom-button/noor-custom-button.component';
+import { CvComponent } from './cv/cv/cv.component';
+import { ListComponent } from './cv/list/list.component';
+import { ItemComponent } from './cv/item/item.component';
+import { CvCardComponent } from './cv/cv-card/cv-card.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { NoorCustomButtonComponent } from './components/noor-custom-button/noor-
     PereComponent,
     FilsComponent,
     SommeComponent,
-    NoorCustomButtonComponent
+    NoorCustomButtonComponent,
+    CvComponent,
+    ListComponent,
+    ItemComponent,
+    CvCardComponent
   ],
   imports: [
     BrowserModule,

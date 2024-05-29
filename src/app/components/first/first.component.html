@@ -1,0 +1,13 @@
+<p [hidden]="isHidden">{{ name }} works!</p>
+<!--
+  Quand tu cliques sur le boutton
+  appelle la méthode showHide
+-->
+La valeur de l'input : {{ message }}
+<input #monInput (change)="message = monInput.value" type="text" class="form-control">
+<button (click)="showHide()" class="btn btn-danger">
+  show/Hide
+</button>
+<div class="alert alert-success">
+  <app-second/>
+</div>

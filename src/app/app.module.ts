@@ -13,6 +13,7 @@ import { CardComponent } from './components/card/card.component';
 import { PereComponent } from './components/pere/pere.component';
 import { FilsComponent } from './components/fils/fils.component';
 import { SommeComponent } from './components/somme/somme.component';
+import { NoorCustomButtonComponent } from './components/noor-custom-button/noor-custom-button.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SommeComponent } from './components/somme/somme.component';
     CardComponent,
     PereComponent,
     FilsComponent,
-    SommeComponent
+    SommeComponent,
+    NoorCustomButtonComponent
   ],
   imports: [
     BrowserModule,

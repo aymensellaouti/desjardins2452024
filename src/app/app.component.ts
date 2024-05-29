@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  // State
   title = 'desjardins2452024';
+  // Behaviour
+  sayHello() {
+    console.log('Hello Desjardins');
+  }
 }

@@ -27,6 +27,7 @@ export class TodoService {
    */
   addTodo(todo: Todo) {
     this.todos.push(todo);
+    // [@24, @24, @24]
   }
 
   /**

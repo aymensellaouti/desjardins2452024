@@ -24,6 +24,8 @@ import { LampeComponent } from './directives/lampe/lampe.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { BtcToUsdPipe } from './pipes/btc-to-usd.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
+import { LoggerService } from './services/logger.service';
+import { TodoComponent } from './todo/components/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
     LampeComponent,
     HighlightDirective,
     BtcToUsdPipe,
-    DefaultImagePipe
+    DefaultImagePipe,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Cv } from '../model/cv';
+import { LoggerService } from 'src/app/services/logger.service';
 
 @Component({
   selector: 'app-cv',
@@ -15,6 +16,11 @@ export class CvComponent {
     new Cv(3, 'Hammodi', 'Noor', 'Dev', '1234', 20, 'rotating_card_profile.png'),
     new Cv(4, 'Lyes', 'Ferrahi', 'Dev', '1234', 20, 'rotating_card_profile2.png'),
   ];
+  // A partir d'angular 14
+  loggerService = inject(LoggerService);
+  constructor() {
+    this.loggerService.logger('cc je suis le cvComponent');
+  }
   onCvSelected(cv: Cv) {
     this.selectedCv = cv;
   }

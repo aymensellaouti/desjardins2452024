@@ -22,6 +22,7 @@ import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { MiniWordComponent } from './directives/mini-word/mini-word.component';
 import { LampeComponent } from './directives/lampe/lampe.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { BtcToUsdPipe } from './pipes/btc-to-usd.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     NgStyleComponent,
     MiniWordComponent,
     LampeComponent,
-    HighlightDirective
+    HighlightDirective,
+    BtcToUsdPipe
   ],
   imports: [
     BrowserModule,

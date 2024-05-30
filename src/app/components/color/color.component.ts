@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-color',
   templateUrl: './color.component.html',
   styleUrls: ['./color.component.css'],
 })
-export class ColorComponent {
+export class ColorComponent implements OnInit {
   // Quels sont met propriétés d'états
 
   /**
@@ -15,9 +16,15 @@ export class ColorComponent {
   /**
    * La couleur du background color de la Div
    */
-  bgColor = this.defaultColor;
+  bgColor = '';
   //Quel est mon comportement
 
+  acr = inject(ActivatedRoute);
+  ngOnInit() {
+    console.log(this.acr.snapshot);
+    this.defaultColor = this.acr.snapshot.params['defaultColor'];
+    this.bgColor = this.defaultColor;
+  }
   changeColor(newColor: string) {
     this.bgColor = newColor;
   }

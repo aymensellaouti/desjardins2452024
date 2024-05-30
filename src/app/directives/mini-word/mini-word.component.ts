@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class MiniWordComponent {
 
+  /** Mon State */
+  color = 'red';
+  size = 50;
+  font = 'garamond';
 }

@@ -20,6 +20,7 @@ import { ItemComponent } from './cv/item/item.component';
 import { CvCardComponent } from './cv/cv-card/cv-card.component';
 import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { MiniWordComponent } from './directives/mini-word/mini-word.component';
+import { LampeComponent } from './directives/lampe/lampe.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { MiniWordComponent } from './directives/mini-word/mini-word.component';
     ItemComponent,
     CvCardComponent,
     NgStyleComponent,
-    MiniWordComponent
+    MiniWordComponent,
+    LampeComponent
   ],
   imports: [
     BrowserModule,

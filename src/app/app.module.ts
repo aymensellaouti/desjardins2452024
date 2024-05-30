@@ -28,6 +28,7 @@ import { LoggerService } from './services/logger.service';
 import { TodoComponent } from './todo/components/todo/todo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { EmbaucheComponent } from './cv/embauche/embauche.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { ToastrModule } from 'ngx-toastr';
     BtcToUsdPipe,
     DefaultImagePipe,
     TodoComponent,
+    EmbaucheComponent
   ],
   imports: [
     BrowserModule,

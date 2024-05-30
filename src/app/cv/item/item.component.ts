@@ -8,6 +8,7 @@ import { Cv } from '../model/cv';
 })
 export class ItemComponent {
   @Input({required: true}) cv!: Cv;
+  @Input() size = 50;
   @Output() notifyCvClick = new EventEmitter<Cv>();
 
   /**

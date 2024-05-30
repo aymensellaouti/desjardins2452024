@@ -23,6 +23,7 @@ import { MiniWordComponent } from './directives/mini-word/mini-word.component';
 import { LampeComponent } from './directives/lampe/lampe.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { BtcToUsdPipe } from './pipes/btc-to-usd.pipe';
+import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { BtcToUsdPipe } from './pipes/btc-to-usd.pipe';
     MiniWordComponent,
     LampeComponent,
     HighlightDirective,
-    BtcToUsdPipe
+    BtcToUsdPipe,
+    DefaultImagePipe
   ],
   imports: [
     BrowserModule,

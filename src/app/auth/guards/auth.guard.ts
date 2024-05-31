@@ -4,9 +4,13 @@ import { AuthService } from '../services/auth.service';
 import { APP_ROUTES } from 'src/app/config/routes.config';
 
 export const authGuard: CanActivateFn = (route, state) => {
+
   const authService = inject(AuthService);
   const router = inject(Router);
   if(!authService.isAuthenticated()) {
+    console.log(route);
+
+    localStorage.setItem('lastvisit', route.routeConfig?.path ?? '');
     router.navigate([APP_ROUTES.login]);
     return false;
   }

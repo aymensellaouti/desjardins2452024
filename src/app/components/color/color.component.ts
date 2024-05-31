@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-color',
@@ -20,6 +20,7 @@ export class ColorComponent implements OnInit {
   //Quel est mon comportement
 
   acr = inject(ActivatedRoute);
+  router = inject(Router);
   ngOnInit() {
     console.log(this.acr.snapshot);
     this.defaultColor = this.acr.snapshot.params['defaultColor'];
@@ -30,5 +31,8 @@ export class ColorComponent implements OnInit {
   }
   reset() {
     this.bgColor = this.defaultColor;
+  }
+  navigateToCv() {
+    this.router.navigate(['cv']);
   }
 }

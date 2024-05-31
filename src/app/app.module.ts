@@ -31,6 +31,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
+import { NF404Component } from './components/nf404/nf404.component';
+import { TestFormComponent } from './components/test-form/test-form.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { DetailCvComponent } from './cv/detail-cv/detail-cv.component';
     TodoComponent,
     EmbaucheComponent,
     NavbarComponent,
-    DetailCvComponent
+    DetailCvComponent,
+    NF404Component,
+    TestFormComponent
   ],
   imports: [
     BrowserModule,

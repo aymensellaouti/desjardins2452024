@@ -1,11 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Cv } from '../model/cv';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CvService {
   private cvs: Cv[] = [];
+  /**
+   * Il devra notifier toute personne intéressé par le click sur le item
+   * du Cv sur lequel on a clické
+   * */
+  // Noor Jean Aymen Lyes Noor Lyes ...
+  private selectCvSubject$ = new Subject<Cv>();
+  selectCv$ = this.selectCvSubject$.asObservable();
   constructor() {
     this.cvs = [
       new Cv(1, 'sellaouti', 'aymen', 'teacher', '1234', 42, ''),
@@ -30,7 +38,13 @@ export class CvService {
       ),
     ];
   }
-
+  /**
+   *
+   * @param cv Broadcaster le cv selectionné à tous les observateur
+   */
+  selectCv(cv: Cv) {
+    this.selectCvSubject$.next(cv);
+  }
   /**
    *
    * Retourne un liste de cvs

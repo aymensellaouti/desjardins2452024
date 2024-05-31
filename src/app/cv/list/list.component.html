@@ -7,6 +7,6 @@
     *ngFor="let cv of cvs; let myOdd = odd"
     class="list-group-item"
   >
-    <app-item (notifyCvClick)="forwardCv.emit(cv)" [cv]="cv"/>
+    <app-item  [cv]="cv"/>
   </li>
   </ol>

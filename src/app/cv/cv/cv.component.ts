@@ -17,8 +17,9 @@ export class CvComponent {
   loggerService = inject(LoggerService);
   constructor() {
     this.loggerService.logger('cc je suis le cvComponent');
+    this.cvService.selectCv$.subscribe(cv => this.selectedCv = cv);
   }
-  onCvSelected(cv: Cv) {
-    this.selectedCv = cv;
-  }
+  // onCvSelected(cv: Cv) {
+  //   this.selectedCv = cv;
+  // }
 }

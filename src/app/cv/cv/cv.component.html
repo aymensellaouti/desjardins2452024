@@ -4,7 +4,7 @@
     <p>{{ 1 | btcToUsd | currency:'CAD':'symbol-narrow'}}</p>
   </div>
   <div class="col">
-    <app-list (forwardCv)="onCvSelected($event)" [cvs]="cvs"/>
+    <app-list [cvs]="cvs"/>
   </div>
   <div class="col">
     <app-cv-card *ngIf="selectedCv" [cv]="selectedCv"/>
